@@ -1,6 +1,7 @@
 <template>
   <form @submit.prevent="handleSubmit">
-     
+    <h1 class="oraculum">Oraculum</h1>
+
     <label>Nome:</label>
     <input type="text" required v-model="nome" />
 
@@ -12,16 +13,15 @@
     <div v-if="passwordError" class="error">{{ passwordError }}</div>
 
     <label>Telefone:</label>
-    <input  required v-model="telefone" />
- 
+    <input required v-model="telefone" />
 
     <div class="temrs">
       <input type="checkbox" v-model="terms" required />
-      <label>Accept terms and conditions</label>
+      <label>Aceitar termos de uso e condições</label>
     </div>
 
     <div class="submit">
-      <button>Create an Account</button>
+      <button>Cadastrar</button>
     </div>
   </form>
 </template>
@@ -30,7 +30,7 @@
 export default {
   data() {
     return {
-      email: "mario",
+      email: "",
       password: "",
       telefone: "",
       nome: "",
@@ -49,19 +49,19 @@ export default {
       }
     },
     handleSubmit() {
-        console.log("ok")
+      console.log("ok");
       this.passwordError =
         this.password.length > 5
-          ? "Sucesso"
-          : "Password must be at least 6 chars long";
+          ? "Sucesso!"
+          : "É necessario ter mais de 6 digitos!";
 
-          if(this.passwordError){
-              console.log('email: ', this.email)
-              console.log('password: ', this.password)
-              console.log('role: ', this.role)
-              console.log('skills: ', this.skills)
-              console.log('tems accepted: ', this.terms)
-          }
+      if (this.passwordError) {
+        console.log("email: ", this.email);
+        console.log("password: ", this.password);
+        console.log("role: ", this.role);
+        console.log("skills: ", this.skills);
+        console.log("tems accepted: ", this.terms);
+      }
     },
   },
 };
@@ -71,6 +71,7 @@ export default {
 form {
   max-width: 420px;
   margin: 30px auto;
+  max-height: 483px;
   background: white;
   text-align: left;
   padding: 40px;
@@ -102,21 +103,10 @@ input[type="checkbox"] {
   position: relative;
   top: 2px;
 }
-.pill {
-  display: inline-block;
-  margin: 20px 10px 0 0;
-  padding: 6px 12px;
-  background: #eee;
-  border-radius: 20px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: #777;
-  cursor: pointer;
-}
 button {
-  background: #0b6dff;
+  background: #534292;
   border: 0;
+  width: 210px;
   padding: 10px 20px;
   margin-top: 20px;
   color: white;
@@ -130,5 +120,15 @@ button {
   margin-top: 10px;
   font-size: 0.8em;
   font-weight: bold;
+}
+
+.oraculum {
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  margin-top: -8px;
+  color: #534292;
+  font-style: italic;
+  font-family: fangsong;
 }
 </style>
