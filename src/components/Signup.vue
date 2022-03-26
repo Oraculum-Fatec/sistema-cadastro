@@ -52,7 +52,7 @@ export default {
       console.log("ok");
       this.passwordError =
         this.password.length > 5
-          ? "Sucesso!"
+          ? "Ok!"
           : "É necessario ter mais de 6 digitos!";
 
       if (this.passwordError) {
