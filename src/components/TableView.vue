@@ -4,7 +4,7 @@
 </template>
 
 <script>
-const {tableModel} = require("./tableModel")
+//const {tableModel} = require("./tableModel")
 const {tableService} = require("../services/table.service")
 
 

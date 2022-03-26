@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="cadastro">
     <Signup/>
   </div>
 </template>
@@ -8,7 +8,7 @@
 import Signup from '@/components/Signup.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'Cadastro',
   components: {
     Signup
   }
