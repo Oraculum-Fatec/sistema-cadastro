@@ -1,4 +1,3 @@
-
 <template lang="">
     <tableModel userList = this.cadastros></tableModel>
 </template>

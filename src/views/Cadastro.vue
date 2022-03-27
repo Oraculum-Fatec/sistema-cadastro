@@ -1,6 +1,6 @@
 <template>
   <div class="cadastro">
-    <Signup/>
+    <Signup></Signup>
   </div>
 </template>
 
