@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-var tableService = {
+var signupService = {
 
     //Send signup data to database via http GET request
-    getUsers(userData) {
+    postUser(userData) {
         var status = null;
         axios
             .post('Path-to-backend', {
@@ -17,4 +17,4 @@ var tableService = {
     }
 }
 
-export default tableService;
+export default signupService;

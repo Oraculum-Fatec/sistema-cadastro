@@ -27,6 +27,9 @@
 </template>
 
 <script>
+
+const {signupService} = require("../services/signup.service")
+
 export default {
   data() {
     return {
@@ -62,6 +65,19 @@ export default {
         console.log("skills: ", this.skills);
         console.log("tems accepted: ", this.terms);
       }
+
+      var userData = {
+        email: this.email,
+      password: this.password,
+      telefone: this.telefone,
+      nome: this.nome,
+      terms: this.terms,
+      tempSkill: this.tempSkill
+      }
+
+      console.log(userData)
+
+      //signupService.postUser(userData)
     },
   },
 };
