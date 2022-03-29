@@ -1,21 +1,17 @@
 <template>
   <div class="tabela">
-    <Table></Table>
+    <TableView></TableView>
   </div>
-  <div>
-    <button>Right</button>
-    <label class=number>1</label>
-    <button>Left</button>
-  </div>
+  
 </template>
 
 <script>
-import Table from '@/components/Table.vue'
+import TableView from '@/components/TableView.vue'
 
 export default {
   name: 'TabelaDeUsuarios',
   components: {
-    Table
+    TableView
   }
 }
 </script>

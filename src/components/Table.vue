@@ -13,12 +13,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in items" :key="item.id">
-          <td>{{ item.id}}</td>
-          <td>{{ item.nome}}</td>
-          <td>{{ item.email }}</td>
-          <td>{{ item.password}}</td>
-          <td>{{ item.telefone}}</td>
+        <tr v-for="user in userList" :key="user.id">
+          <td>{{ user.id }}</td>
+          <td>{{ user.nome }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.password }}</td>
+          <td>{{ user.telefone }}</td>
         </tr>
       </tbody>
     </table>
@@ -26,20 +26,15 @@
 </template>
 
 <script>
-import TableView from '@/components/TableView.vue'
+
 
 export default {
-  data() {
-    return {
-      items:
-      [
-        { id: 1, nome: 'Arthur', email: 'art@email.com', password: 'art123', telefone: '11111-1111'},
-        { id: 2, nome: 'Rodrigo', email: 'rod@email.com', password: 'rod123', telefone: '22222-2222'},
-        { id: 3, nome: 'Pedro', email: 'ped@email.com', password: 'ped123', telefone: '33333-3333'},
-        { id: 4, nome: 'Thiago', email: 'thi@email.com', password: 'thi123', telefone: '44444-4444'}
-      ]
-    };
-  }
+  name: "Table",
+  props:[
+    "userList"
+  ],
+  beforeMount() {
+  },
 };
 </script>
 
@@ -63,14 +58,19 @@ table {
   width: 100%;
 }
 
-#usuarios td, #usuarios th {
+#usuarios td,
+#usuarios th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#usuarios tr:nth-child(even){background-color: #f2f2f2;}
+#usuarios tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#usuarios tr:hover {background-color: #ddd;}
+#usuarios tr:hover {
+  background-color: #ddd;
+}
 
 #usuarios th {
   padding-top: 12px;
