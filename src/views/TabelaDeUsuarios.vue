@@ -20,7 +20,7 @@ export default {
 .number {
   color: #aaa;
   display: inline-block;
-  margin: 25px 0 15px;
+  margin: 25px 40px 15px;
   font-size: 1.2em;
   letter-spacing: uppercase;
   letter-spacing: 1px;

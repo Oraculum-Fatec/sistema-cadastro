@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form class="formTable">
     <h1 class="title">Lista de Usuários</h1>
 
     <table class="table-hover" id="usuarios">
@@ -39,8 +39,8 @@ export default {
 </script>
 
 <style>
-form {
-  max-width: 420px;
+.formTable {
+  max-width: 721px;
   margin: 30px auto;
   max-height: 483px;
   background: white;

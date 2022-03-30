@@ -1,9 +1,9 @@
 <template lang="">
     <Table :userList = this.cadastros> </Table>
     <div>
-    <button @click="changePage(-1)" :disabled="currentPage<2">Back</button>
+    <button class="buttonTable" @click="changePage(-1)" :disabled="currentPage<2">Back</button>
     <label class=number>{{this.currentPage}}</label>
-    <button @click="changePage(1)">Next</button>
+    <button class="buttonTable" @click="changePage(1)">Next</button>
     </div>
 </template>
 
@@ -66,6 +66,15 @@ export default {
 }
 </script>
 
-<style lang="">
-    
+<style>
+.buttonTable{
+     background: #534292;
+ 
+  width: 210px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.2)
+}
 </style>
