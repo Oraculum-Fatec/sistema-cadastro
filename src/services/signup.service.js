@@ -1,20 +1,16 @@
-import axios from 'axios';
+import axios from "axios";
 
-var signupService = {
-
-    //Send signup data to database via http GET request
-    postUser(userData) {
-        var status = null;
-        axios
-            .post('Path-to-backend', {
-                params: {
-                    userData: userData
-                }
-            })
-            .then(response => (status = response))
-            .catch(e => (console.log(e)))
-        return status;
-    }
-}
-
-export default signupService;
+export default {
+  postUser: (userData) => {
+    var status = null;
+    axios
+      .post("http://localhost:8081/users", {
+        params: {
+          userData: userData,
+        },
+      })
+      .then((response) => (status = response))
+      .catch((e) => console.log(e));
+    return status;
+  },
+};

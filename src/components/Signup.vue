@@ -2,8 +2,8 @@
   <form @submit.prevent="handleSubmit">
     <h1 class="oraculum">Oraculum</h1>
 
-    <label>Nome:</label>
-    <input type="text" required v-model="nome" />
+    <label>name:</label>
+    <input type="text" required v-model="name" />
 
     <label>Email:</label>
     <input type="email" required v-model="email" />
@@ -12,8 +12,8 @@
     <input type="password" required v-model="password" />
     <div v-if="passwordError" class="error">{{ passwordError }}</div>
 
-    <label>Telefone:</label>
-    <input required v-model="telefone" />
+    <label>phone:</label>
+    <input required v-model="phone" />
 
     <div class="temrs">
       <input type="checkbox" v-model="terms" required />
@@ -27,57 +27,35 @@
 </template>
 
 <script>
-
-const {signupService} = require("../services/signup.service")
+import signupService from "../services/signup.service.js";
 
 export default {
   data() {
     return {
       email: "",
       password: "",
-      telefone: "",
-      nome: "",
+      phone: "",
+      name: "",
       terms: false,
-      tempSkill: "",
       passwordError: "",
     };
   },
   methods: {
-    addSkill(e) {
-      if (e.key === "," && this.tempSkill) {
-        if (!this.skills.includes(this.tempSkill)) {
-          this.skills.push(this.tempSkill);
-        }
-        this.tempSkill = "";
-      }
-    },
     handleSubmit() {
-      console.log("ok");
+      //check Senha
       this.passwordError =
         this.password.length > 5
-          ? "Ok!"
+          ? "OK!"
           : "É necessario ter mais de 6 digitos!";
-
-      if (this.passwordError) {
-        console.log("email: ", this.email);
-        console.log("password: ", this.password);
-        console.log("role: ", this.role);
-        console.log("skills: ", this.skills);
-        console.log("tems accepted: ", this.terms);
-      }
 
       var userData = {
         email: this.email,
-      password: this.password,
-      telefone: this.telefone,
-      nome: this.nome,
-      terms: this.terms,
-      tempSkill: this.tempSkill
-      }
-
-      console.log(userData)
-
-      //signupService.postUser(userData)
+        password: this.password,
+        phone: this.phone,
+        name: this.name,
+      };
+      console.log(userData);
+      signupService.postUser(userData);
     },
   },
 };
