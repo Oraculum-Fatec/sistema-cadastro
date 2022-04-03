@@ -8,7 +8,6 @@
           <th>ID</th>
           <th>Nome</th>
           <th>E-Mail</th>
-          <th>Senha</th>
           <th>Telefone</th>
         </tr>
       </thead>
