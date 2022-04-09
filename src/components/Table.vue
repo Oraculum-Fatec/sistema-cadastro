@@ -8,7 +8,6 @@
           <th>ID</th>
           <th>Nome</th>
           <th>E-Mail</th>
-          <th>Senha</th>
           <th>Telefone</th>
         </tr>
       </thead>
@@ -17,7 +16,6 @@
           <td>{{ user.id }}</td>
           <td>{{ user.nome }}</td>
           <td>{{ user.email }}</td>
-          <td>{{ user.password }}</td>
           <td>{{ user.telefone }}</td>
         </tr>
       </tbody>
