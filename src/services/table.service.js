@@ -6,11 +6,7 @@ var tableService = {
     getUsers(page) {
         var tableUsers = null;
         axios
-            .get('Path-to-backend', {
-                params: {
-                    page: page
-                }
-            })
+            .get("http://localhost:8081/users", page)
             .then(response => (this.tableUsers = response))
             .catch(e => (console.log(e)))
         return tableUsers;
