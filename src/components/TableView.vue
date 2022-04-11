@@ -9,9 +9,9 @@
 
 <script>
 
-const {tableService} = require("../services/table.service")
+import tableService from "../services/table.service";
 
-import Table from "./Table.vue"
+import Table from "./Table.vue";
 
 export default {
     components:{
@@ -24,18 +24,19 @@ export default {
         }
     },
 
-    created() {
-
-        this.cadastros = tableService.getUsers(this.currentPage);
+    async created() {
+        this.cadastros = await tableService.getUsers(this.currentPage);
+        console.log(this.cadastros);
     },
 
     methods: {
-        changePage(nextPage) {
+        async changePage(nextPage) {
             //nextPage is 1 or -1
             //change current table page
             this.currentPage = this.currentPage + nextPage
 
-            this.cadastros = tableService.getUsers(this.currentPage)
+            this.cadastros = await tableService.getUsers(this.currentPage)
+
         }
         
     },
