@@ -1,19 +1,44 @@
-# frontend
+# Front-end Sistema de Cadastro
 
-## Project setup
-```
-npm install
-```
+## Tabela de conteúdos
+   * [Sobre](#sobre)
+   * [Tecnologias](#tecnologias)
+   * [Instalação](#instalação)
+   * [Como rodar a aplicação](#como-rodar-a-aplicação)
+      * [Front-End](#front-end)
+      * [Monitoramento](#monitoramento)
+   * [Demonstração da aplicação](#demonstração-da-aplicação)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Sobre
+Este repositório contém o Front-end de Sistema de Cadastro de Usuários simples no qual possui uma interface de cadastro de usuário e tabela de usuários cadastrados. Sendo utilizado para teste de monitoramento e previsão de indisponibilidade.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Para uma melhor experiência, é recomendado utilizar o Back-end deste sistema. Clique [AQUI](https://github.com/Oraculum-Fatec/sistema-cadastro-backend) para acessar o seu repositório.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Tecnologias
+- [Node](https://nodejs.org/en/)
+- [Vue.js](https://br.vuejs.org/)
+
+
+## Instalação
+Para começar, será necessário instalar em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node](https://nodejs.org/en/download/), IDE de sua preferência.
+
+## Como Rodar a Aplicação
+Segue abaixo o passo a passo para configurar e executar o Front-end:
+
+### Front-end
+Primeiramente será necessário clonar o repositório em sua máquina local com o comando:
+
+      git clone https://github.com/Oraculum-Fatec/sistema-cadastro.git
+
+Em seguida, para instalar as dependências:
+
+      npm install
+      
+Execute o back-end com:
+ 
+      npm run serve
+
+### Configuração customizada
+Consulte [Configuration Reference](https://cli.vuejs.org/config/).
