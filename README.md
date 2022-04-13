@@ -36,7 +36,7 @@ Em seguida, para instalar as dependências:
 
       npm install
       
-Execute o back-end com:
+Execute o front-end com:
  
       npm run serve
 
