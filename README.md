@@ -6,9 +6,7 @@
    * [Instalação](#instalação)
    * [Como rodar a aplicação](#como-rodar-a-aplicação)
       * [Front-End](#front-end)
-      * [Monitoramento](#monitoramento)
-   * [Demonstração da aplicação](#demonstração-da-aplicação)
-
+  
 ## Sobre
 Este repositório contém o Front-end de Sistema de Cadastro de Usuários simples no qual possui uma interface de cadastro de usuário e tabela de usuários cadastrados. Sendo utilizado para teste de monitoramento e previsão de indisponibilidade.
 
