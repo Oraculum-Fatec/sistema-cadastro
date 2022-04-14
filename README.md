@@ -38,5 +38,10 @@ Execute o front-end com:
  
       npm run serve
 
-### Configuração customizada
+## Configuração customizada
 Consulte [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Demonstração
+<p align="center">
+  <img alt="prom" src="src/assets/gif_sistema-cadastro.gif">
+</p>
