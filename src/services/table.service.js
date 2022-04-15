@@ -6,7 +6,7 @@ var tableService = {
     async getUsers(page) {
         var tableUsers = null;
         await axios
-            .get("http://localhost:8081/users", {
+            .post("http://localhost:8081/page", {
                 data: {
                     page: page.toString()
                 }
